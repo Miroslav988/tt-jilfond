@@ -1,30 +1,25 @@
+<script>
+import MainContent from "./components/MainContent.vue";
+import MyHeader from "./components/MyHeader.vue";
+export default {
+  components: {
+    MyHeader,
+    MainContent,
+  },
+};
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <MyHeader />
+  <MainContent />
 </template>
-
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@font-face {
+  font-family: "Monserat";
+  src: url(../public/Font/Montserrat-VariableFont_wght.ttf);
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#app {
+  margin: 50px 51px 44px 47px;
+  font-family: "Monserat", sans-serif;
 }
 </style>
